@@ -4,7 +4,9 @@
   const mqMobile = window.matchMedia('(max-width: 759.98px)');
   const mqReduce = window.matchMedia('(prefers-reduced-motion: reduce)');
   const isMobile = () => mqMobile.matches;
-  const hdr = () => (isMobile() ? 88 : 80); // marquee 28 + nav (52 desktop / 60 mobile)
+  // Sticky header height: marquee + chapter nav (80 desktop / 88 mobile, scaled on wide screens)
+  const hdrEls = document.querySelectorAll('.topbar > .marquee, .chapnav');
+  const hdr = () => Array.from(hdrEls).reduce((h, el) => h + el.offsetHeight, 0) || (isMobile() ? 88 : 80);
 
   /* ---------- Marquees ---------- */
   document.querySelectorAll('[data-marquee]').forEach((track) => {
