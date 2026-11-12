@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Manifesto Educ.Attive</title>
+<meta name="description" content="Il manifesto di Educ.Attive, un gruppo di educatrici museali che si organizza per condizioni di lavoro più dignitose nel settore culturale.">
+<meta name="theme-color" content="#000000">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Manifesto Educ.Attive">
+<meta property="og:description" content="Siamo un gruppo di educatrici museali. Questo è il nostro manifesto.">
+<meta property="og:image" content="assets/apple-touch-icon.png">
+<link rel="icon" type="image/png" href="assets/favicon.png">
+<link rel="apple-touch-icon" href="assets/apple-touch-icon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Oswald:wght@600&family=Patrick+Hand+SC&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+<script>document.documentElement.classList.add('js');</script>
+</head>
+<body>
+
+<!-- Sticky header: marquee + chapter nav -->
+<div class="topbar">
+  <div class="marquee" aria-hidden="true"><div class="marquee__track" data-marquee></div></div>
+
+  <nav class="chapnav chapnav--desk" aria-label="Capitoli del manifesto">
+    <a class="chapnav__item st" href="#chi-siamo" data-go="chi-siamo"><span class="chapnav__num">01</span><span>Chi siamo</span></a>
+    <a class="chapnav__item st" href="#perche" data-go="perche"><span class="chapnav__num">02</span><span>Perché ci siamo mobilitate pubblicamente</span></a>
+    <a class="chapnav__item st" href="#lo-stile" data-go="lo-stile"><span class="chapnav__num">03</span><span>Lo stile della nostra lotta</span></a>
+    <a class="chapnav__item st" href="#cosa-vogliamo" data-go="cosa-vogliamo"><span class="chapnav__num">04</span><span>Cosa vogliamo</span></a>
+    <div class="progress" data-progress></div>
+  </nav>
+
+  <nav class="chapnav chapnav--mob" aria-label="Capitoli del manifesto">
+    <div class="chips" data-chips>
+      <a class="chip st" href="#chi-siamo" data-go="chi-siamo"><span class="chip__num">01</span><span>Chi siamo</span></a>
+      <a class="chip st" href="#perche" data-go="perche"><span class="chip__num">02</span><span>Perché</span></a>
+      <a class="chip st" href="#lo-stile" data-go="lo-stile"><span class="chip__num">03</span><span>Lo stile</span></a>
+      <a class="chip st" href="#cosa-vogliamo" data-go="cosa-vogliamo"><span class="chip__num">04</span><span>Cosa vogliamo</span></a>
+    </div>
+    <div class="progress" data-progress></div>
+  </nav>
+</div>
+
+<!-- Desktop hero: "Cartelli" -->
+<header class="hero-desk" data-hero>
+  <div class="hero-desk__top">
+    <h1 class="hero-desk__title st">
+      <span class="c-crimson">Manifesto</span>
+      <span>Educ.Attive</span>
+    </h1>
+    <div class="hero-desk__intro">
+      <p class="st">Siamo un gruppo di educatrici museali. Questo è il nostro manifesto: scegli un cartello o scorri.</p>
+      <div class="cue"><span class="bounce" aria-hidden="true">↓</span><span>Scorri</span></div>
+    </div>
+  </div>
+  <div class="placards">
+    <a class="placard st" href="#chi-siamo" data-go="chi-siamo" style="--tf: rotate(-4deg) translateY(20px)">
+      <span class="placard__board" style="--bg:#EED734; --fg:#111111; --lab:#CB264D; --fs:28">
+        <span class="placard__text">Più il nostro lavoro si frammenta, più il peso ricade su di noi.</span>
+        <span class="placard__label"><span>01</span><span>Chi siamo</span></span>
+      </span>
+      <span class="placard__stick"></span>
+    </a>
+    <a class="placard st" href="#perche" data-go="perche" style="--tf: rotate(3deg) translateY(64px)">
+      <span class="placard__board" style="--bg:#CB264D; --fg:#FFF6F0; --lab:#EED734; --fs:36">
+        <span class="placard__text">Noi vogliamo uscire allo scoperto.</span>
+        <span class="placard__label"><span>02</span><span>Perché</span></span>
+      </span>
+      <span class="placard__stick"></span>
+    </a>
+    <a class="placard st" href="#lo-stile" data-go="lo-stile" style="--tf: rotate(-2deg) translateY(0px)">
+      <span class="placard__board" style="--bg:#111111; --fg:#EED734; --lab:#FFF6F0; --fs:28">
+        <span class="placard__text">Fare della nostra pratica professionale uno strumento di lotta.</span>
+        <span class="placard__label"><span>03</span><span>Lo stile</span></span>
+      </span>
+      <span class="placard__stick"></span>
+    </a>
+    <a class="placard st" href="#cosa-vogliamo" data-go="cosa-vogliamo" style="--tf: rotate(5deg) translateY(40px)">
+      <span class="placard__board placard__board--ring" style="--bg:#FFF6F0; --fg:#CB264D; --lab:#CB264D; --fs:44">
+        <span class="placard__text">Dobbiamo farci sentire!</span>
+        <span class="placard__label"><span>04</span><span>Cosa vogliamo</span></span>
+      </span>
+      <span class="placard__stick"></span>
+    </a>
+  </div>
+</header>
+
+<!-- Mobile hero: video -->
+<header class="hero-mob" data-hero>
+  <video class="hero-mob__video" data-video data-src="assets/hero-video.mp4" poster="assets/hero-poster.jpg"
+         muted loop playsinline disablepictureinpicture preload="none" aria-hidden="true" tabindex="-1"></video>
+  <div class="hero-mob__veil" aria-hidden="true"></div>
+  <p class="hero-mob__intro st">Siamo un gruppo di educatrici museali. Questo è il nostro manifesto.</p>
+  <h1 class="hero-mob__title st" data-fit-title>
+    <span class="hero-mob__fit" data-fit>Manifesto</span>
+    <span class="c-yellow">Educ.</span>
+    <span class="c-yellow">Attive</span>
+  </h1>
+  <div class="hero-mob__cue"><span>Scorri per leggere</span><span class="bounce" aria-hidden="true">↓</span></div>
+  <img class="hero-mob__logo" src="assets/logo-sticker.png" alt="Logo Educ.Attive" width="56" height="56">
+</header>
+
+<main>
+
+  <!-- 01 Chi siamo -->
+  <section class="chapter" id="chi-siamo" data-chap="chi-siamo" aria-labelledby="t-chi">
+    <div class="panel" style="--bg:#EED734; --fg:#111111; --num:#CB264D">
+      <span class="panel__num">01</span>
+      <h2 class="panel__title st" id="t-chi">Chi siamo</h2>
+      <div class="panel__foot">
+        <div class="ticks"><span class="tick" data-tick="chi-1">01.1</span></div>
+      </div>
+    </div>
+    <div class="mods">
+      <article class="mod" data-m="chi-1" data-reveal>
+        <div class="mod__inner">
+          <span class="mod__num">01.1</span>
+          <p class="mod__pull st">Più il nostro lavoro si frammenta, più il peso ricade su di noi.</p>
+          <p class="mod__body st">Siamo Educ.Attive, un gruppo di educatrici museali. Lavoriamo in musei diversi per la stessa cooperativa muovendoci tra Prato, Pistoia, Signa, Monsummano e Quarrata. Ci occupiamo di accoglienza, biglietteria, visite guidate, laboratori artistici e accessibilità. Ogni museo, mostra e pubblico di riferimento richiede preparazione specifica e aggiornamento continuo. La frammentazione del lavoro sul territorio si traduce in un aumento degli spostamenti, dell’organizzazione e del carico di lavoro, senza un adeguato riconoscimento né tutele. Più il nostro lavoro si frammenta, più il peso ricade su di noi.</p>
+        </div>
+      </article>
+    </div>
+  </section>
+
+  <!-- 18 Lewis -->
+  <aside class="quote" data-reveal style="--bg:#FFF6F0; --fg:#CB264D; --cite:#CB264D">
+    <p class="quote__text st">“Combattiamo prima da una parte, poi dall’altra, ma sempre per la stessa causa, che non è né l’una né l’altra parte, ma è la nostra parte.”</p>
+    <p class="quote__cite st">(Wyndham Lewis, Manifesto del Vorticismo / Manifesto Blast, 1914)</p>
+  </aside>
+
+  <!-- 02 Perché -->
+  <section class="chapter" id="perche" data-chap="perche" aria-labelledby="t-perche">
+    <div class="panel" style="--bg:#CB264D; --fg:#FFF6F0; --num:#EED734">
+      <span class="panel__num">02</span>
+      <h2 class="panel__title panel__title--long st" id="t-perche">Perché ci siamo mobilitate pubblica&shy;mente</h2>
+      <div class="panel__foot">
+        <div class="ticks"><span class="tick" data-tick="perche-1">02.1</span><span class="tick" data-tick="perche-2">02.2</span></div>
+      </div>
+    </div>
+    <div class="mods">
+      <article class="mod" data-m="perche-1" data-reveal>
+        <div class="mod__inner">
+          <span class="mod__num">02.1</span>
+          <p class="mod__pull st">Siamo stanche di lavorare a queste condizioni.</p>
+          <p class="mod__body st">Siamo stanche di lavorare a queste condizioni e abbiamo deciso di organizzarci sindacalmente per affrontare i problemi specifici della nostra situazione contrattuale. La nostra mobilitazione non si esaurisce nella rivendicazione di condizioni di lavoro più dignitose, si estende alla necessità di sensibilizzare chi dell’arte fruisce e chi per l’arte, in silenzio, lavora. “Un manifesto è una comunicazione fatta al mondo intero, nella quale l’unica pretesa è quella di scoprire il metodo per guarire istantaneamente” (Manifesto del Dadaismo).</p>
+        </div>
+      </article>
+      <article class="mod" data-m="perche-2" data-reveal>
+        <div class="mod__inner">
+          <span class="mod__num">02.2</span>
+          <p class="mod__pull st">Noi vogliamo uscire allo scoperto.</p>
+          <p class="mod__body st">Se i musei possono essere accessibili, se le opere possono essere custodite, rese fruibili e accompagnate nella loro interpretazione, è grazie al lavoro di chi quotidianamente ne garantisce l’apertura, la cura e la mediazione. Una cultura che non riconosce la dignità di chi precede e sostiene ogni esperienza culturale, tradisce il suo stesso senso. Noi vogliamo uscire allo scoperto.</p>
+        </div>
+      </article>
+    </div>
+  </section>
+
+  <!-- 17 Celant -->
+  <aside class="quote" data-reveal style="--bg:#EED734; --fg:#111111; --cite:#CB264D">
+    <p class="quote__text st">“Uscire dal sistema vuol dire rivoluzione”</p>
+    <p class="quote__cite st">(Celant, Appunti per una guerriglia, 1967)</p>
+  </aside>
+
+  <!-- 03 Lo stile -->
+  <section class="chapter" id="lo-stile" data-chap="lo-stile" aria-labelledby="t-stile">
+    <div class="panel" style="--bg:#111111; --fg:#EED734; --num:#FFF6F0">
+      <span class="panel__num">03</span>
+      <h2 class="panel__title panel__title--long st" id="t-stile">Lo stile della nostra lotta</h2>
+      <div class="panel__foot">
+        <div class="ticks"><span class="tick" data-tick="stile-1">03.1</span><span class="tick" data-tick="stile-2">03.2</span></div>
+        <img class="panel__img" src="assets/pastello.png" alt="" width="137" height="169" style="--rot:24deg">
+      </div>
+    </div>
+    <div class="mods">
+      <article class="mod" data-m="stile-1" data-reveal>
+        <div class="mod__inner">
+          <span class="mod__num">03.1</span>
+          <p class="mod__pull st">Fare della nostra stessa pratica professionale uno strumento di lotta.</p>
+          <p class="mod__body st">Cerchiamo di avvicinare i pubblici alla nostra lotta non soltanto attraverso ciò che rivendichiamo, ma anche attraverso il modo in cui scegliamo di farlo. Come lavoratrici dell’arte, sentiamo la necessità di fare della nostra stessa pratica professionale uno strumento di lotta, intrecciando la dimensione della denuncia con quella di atto creativo. Mettiamo in campo i linguaggi, gli strumenti e le possibilità espressive che appartengono al nostro mestiere affinché il gesto creativo non si esaurisca nello spazio chiuso del museo ma assuma una dimensione pubblica e politica.</p>
+        </div>
+      </article>
+      <article class="mod" data-m="stile-2" data-reveal>
+        <div class="mod__inner">
+          <span class="mod__num">03.2</span>
+          <p class="mod__pull st">Riappropriarci della nostra professione e della sua funzione sociale.</p>
+          <p class="mod__body st">Le piazze, i picchetti, i flash mob e tutte le occasioni di mobilitazione diventano momenti in cui la creatività sollecita una riflessione sul lavoro culturale, sul suo valore e sulle condizioni materiali che lo rendono possibile. È anche così che intendiamo riappropriarci della nostra professione e della sua funzione sociale: riattivando il potenziale trasformativo della cultura come strumento di pensiero critico, consapevolezza e partecipazione.</p>
+        </div>
+      </article>
+    </div>
+  </section>
+
+  <!-- 19 Realismo -->
+  <aside class="quote" data-reveal style="--bg:#CB264D; --fg:#FFF6F0; --cite:#FFF6F0">
+    <p class="quote__text st">“L’arte dovrebbe assisterci dovunque la vita trascorre e agisce: al banco, a tavola, al lavoro, in riposo, al gioco, nei giorni feriali e in vacanza, a casa e nella strada, in modo che la fiamma del vivere non si estingua nell’umanità”</p>
+    <p class="quote__cite st">(Manifesto del Realismo, 1920, corrente dei costruttivisti)</p>
+  </aside>
+
+  <!-- 04 Cosa vogliamo -->
+  <section class="chapter" id="cosa-vogliamo" data-chap="cosa-vogliamo" aria-labelledby="t-cosa">
+    <div class="panel" style="--bg:#EED734; --fg:#111111; --num:#CB264D">
+      <span class="panel__num">04</span>
+      <h2 class="panel__title st" id="t-cosa">Cosa vogliamo</h2>
+      <div class="panel__foot">
+        <div class="ticks">
+          <span class="tick" data-tick="cosa-1">04.1</span><span class="tick" data-tick="cosa-2">04.2</span><span class="tick" data-tick="cosa-3">04.3</span><span class="tick" data-tick="cosa-4">04.4</span><span class="tick" data-tick="cosa-5">04.5</span>
+        </div>
+        <img class="panel__img" src="assets/forbici.png" alt="" width="159" height="169" style="--rot:-18deg">
+      </div>
+    </div>
+    <div class="mods">
+      <article class="mod" data-m="cosa-1" data-reveal>
+        <div class="mod__inner">
+          <span class="mod__num">04.1</span>
+          <p class="mod__pull st">Continuiamo ad essere colleghe e compagne di lotta.</p>
+          <p class="mod__body st">Da quando siamo riuscite a costituirci come Educ.Attive, abbiamo perso componenti del gruppo a causa delle oscene scelte lavorative a cui alcune di noi sono state messe di fronte. Attualmente non tutte lavoriamo per la stessa cooperativa ma continuiamo ad essere colleghe e compagne di lotta in un settore con gravissimi problemi strutturali.</p>
+        </div>
+      </article>
+      <article class="mod" data-m="cosa-2" data-reveal>
+        <div class="mod__inner">
+          <span class="mod__num">04.2</span>
+          <h3 class="mod__sub st">Parità salariale</h3>
+          <p class="mod__body st">Vogliamo che i diritti previsti dal CCNL Federculture vengano rispettati e che il contratto venga applicato a tutte le lavoratrici e i lavoratori del settore culturale, superando disparità e trattamenti differenti a parità di mansioni.</p>
+        </div>
+      </article>
+      <article class="mod" data-m="cosa-3" data-reveal>
+        <div class="mod__inner">
+          <span class="mod__num">04.3</span>
+          <h3 class="mod__sub st">Soluzioni alternative all’esternaliz&shy;zazione:</h3>
+          <p class="mod__body st">Vogliamo un superamento della logica degli appalti e della precarizzazione del lavoro culturale. La cultura non può dipendere da affidamenti brevi, instabili e discontinui: deve essere riconosciuta come un servizio pubblico stabile e fondamentale per la cittadinanza.</p>
+        </div>
+      </article>
+      <article class="mod" data-m="cosa-4" data-reveal>
+        <div class="mod__inner">
+          <span class="mod__num">04.4</span>
+          <h3 class="mod__sub st">Spargere la voce</h3>
+          <p class="mod__body st">Abbiamo bisogno che si sappia cosa c’è dietro i luoghi della cultura perché la cultura è fatta per la comunità ed è giusto e responsabile che la comunità sia consapevole delle condizioni di lavoro di chi garantisce un servizio essenziale per la crescita di tutte/i noi.</p>
+        </div>
+      </article>
+      <article class="mod mod--yellow" data-m="cosa-5" data-reveal>
+        <div class="mod__inner">
+          <span class="mod__num">04.5</span>
+          <p class="mod__pull st">Dobbiamo farci sentire! Dobbiamo fare squadra! Dobbiamo sindacalizzarci!</p>
+          <p class="mod__body st">Lavorator* della cultura, unitevi!: vogliamo che il nostro settore smetta di vivere nella rassegnazione nei confronti di un lavoro che non è riconosciuto e per il quale, forse, non si lotta a sufficienza. Dobbiamo farci sentire! Dobbiamo fare squadra! Dobbiamo sindacalizzarci per spingere le istituzioni a dare il giusto valore a ciò che facciamo! “Non v’è più bellezza, se non nella lotta” (Manifesto del Futurismo, 1909)</p>
+        </div>
+      </article>
+    </div>
+  </section>
+
+</main>
+
+<!-- Instagram CTA -->
+<section class="cta" aria-labelledby="t-cta">
+  <div class="cta__head">
+    <span class="cta__handle">@educ.attive</span>
+    <h2 class="cta__title st" id="t-cta">Seguici su Instagram</h2>
+  </div>
+  <a class="cta__btn st" href="https://www.instagram.com/educ.attive/" target="_blank" rel="noopener">Seguici su Instagram <span class="glyph" aria-hidden="true">↗</span></a>
+</section>
+
+<footer class="footer">
+  <div class="footer__inner">
+    <div class="footer__brand">
+      <span class="footer__name st">Educ.Attive</span>
+      <span class="footer__sub">Educatrici museali · Prato · Pistoia · Signa · Monsummano · Quarrata</span>
+    </div>
+    <button class="footer__top st" type="button" data-top>Torna all’inizio ↑</button>
+  </div>
+  <div class="marquee" aria-hidden="true"><div class="marquee__track marquee__track--rev" data-marquee></div></div>
+</footer>
+
+<script src="main.js" defer></script>
+</body>
+</html>
