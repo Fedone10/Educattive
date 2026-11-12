@@ -12,10 +12,8 @@
 <meta property="og:image" content="assets/apple-touch-icon.png">
 <link rel="icon" type="image/png" href="assets/favicon.png">
 <link rel="apple-touch-icon" href="assets/apple-touch-icon.png">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Oswald:wght@600&family=Patrick+Hand+SC&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="styles.css?v=7">
+<link rel="preload" href="fonts/patrick-hand-sc-latin-400-normal.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="styles.css?v=8">
 <script>document.documentElement.classList.add('js');</script>
 </head>
 <body>
@@ -271,9 +269,19 @@
     </div>
     <button class="footer__top st" type="button" data-top>Torna all’inizio ↑</button>
   </div>
+  <p class="footer__privacy" id="privacy">
+    <strong>Privacy.</strong> Questo sito non usa cookie e noi non raccogliamo dati personali.
+    Contiamo le visite in forma anonima e aggregata con <a href="https://www.goatcounter.com" target="_blank" rel="noopener">GoatCounter</a>,
+    senza cookie e senza conservare dati che permettano di identificarti. I caratteri tipografici sono ospitati sul sito stesso,
+    senza servizi esterni. Il sito è ospitato su GitHub Pages: come ogni servizio di hosting, GitHub può registrare dati tecnici
+    di accesso (ad esempio l’indirizzo IP) per motivi di sicurezza. Per qualsiasi domanda scrivici su Instagram
+    <a href="https://www.instagram.com/educ.attive/" target="_blank" rel="noopener">@educ.attive</a>.
+  </p>
   <div class="marquee" aria-hidden="true"><div class="marquee__track marquee__track--rev" data-marquee></div></div>
 </footer>
 
-<script src="main.js?v=7" defer></script>
+<script src="main.js?v=8" defer></script>
+<!-- Statistiche anonime senza cookie (GoatCounter) -->
+<script data-goatcounter="https://fedone.goatcounter.com/count" async src="https://gc.zgo.at/count.js"></script>
 </body>
 </html>

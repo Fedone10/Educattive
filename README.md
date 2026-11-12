@@ -16,7 +16,7 @@ Poi apri http://localhost:8000. Per pubblicarla basta caricare la cartella così
 - `styles.css` — colori, tipografia, layout (desktop ≥ 760px, mobile < 760px)
 - `main.js` — nav dei capitoli, barra di lettura, rivelazione allo scroll, video dell'hero mobile
 - `assets/` — immagini e video. `hero-video.mp4` è già senza audio e ricompresso (540px, ~5.7 MB)
-- `fonts/` — vedi sotto
+- `fonts/` — Patrick Hand SC e Oswald ospitati sul sito (licenza SIL OFL), più Lazy Dog quando arriva
 
 ## Font Lazy Dog
 
