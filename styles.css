@@ -527,25 +527,44 @@ a { text-decoration: none; }
 .js .is-in .mod__inner,
 .js .is-in .quote__text { opacity: 1; transform: none; }
 
-/* ---------- Instagram CTA ---------- */
+/* ---------- Instagram CTA (white, frog bottom-left) ---------- */
 .cta {
-  background: var(--crimson);
-  color: var(--cream);
+  position: relative;
+  overflow: hidden;
+  background: #FFFFFF;
+  color: var(--ink);
   border-top: var(--line);
-  padding: calc(96 * var(--u)) calc(28 * var(--u));
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
-  align-items: flex-end;
-  gap: calc(28 * var(--u));
+  min-height: min(78vh, calc(640 * var(--u)));
+  display: grid;
+  grid-template-columns: minmax(0, 5fr) minmax(0, 7fr);
 }
-.cta__head { display: flex; flex-direction: column; gap: calc(14 * var(--u)); }
-.cta__handle { font-size: calc(15 * var(--u)); letter-spacing: .22em; color: var(--yellow); }
-.cta__title {
-  font-size: min(8vw, calc(120 * var(--u)));
-  line-height: .92;
+.cta picture { display: contents; }
+.cta__rana {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: min(38vw, calc(620 * var(--u)));
+  height: auto;
+  pointer-events: none;
+}
+.cta__content {
+  grid-column: 2;
+  position: relative;
+  z-index: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  gap: calc(24 * var(--u));
+  padding: calc(64 * var(--u)) calc(56 * var(--u)) calc(64 * var(--u)) calc(24 * var(--u));
+}
+.cta__handle { font-size: calc(15 * var(--u)); letter-spacing: .22em; color: var(--crimson); }
+.cta__text {
+  font-size: min(3vw, calc(42 * var(--u)));
+  line-height: 1.1;
   text-wrap: balance;
 }
+.cta__small { font-size: calc(30 * var(--u)); line-height: 1.2; color: var(--crimson); }
 .cta__btn {
   display: inline-flex;
   align-items: center;
@@ -558,12 +577,12 @@ a { text-decoration: none; }
   border: var(--line);
   font-size: calc(19 * var(--u));
   letter-spacing: .06em;
-  transition: transform .3s var(--ease-out), background .3s ease;
+  transition: transform .3s var(--ease-out), background .3s ease, color .3s ease;
 }
 .cta__btn .glyph { font-size: calc(20 * var(--u)); }
 .cta__btn:hover, .cta__btn:focus-visible {
-  background: var(--cream);
-  color: var(--ink);
+  background: var(--crimson);
+  color: var(--cream);
   transform: translateY(-4px);
 }
 .cta__btn:focus-visible { outline-color: var(--ink); }
@@ -638,8 +657,11 @@ a { text-decoration: none; }
   .quote--inline { padding: 48px 24px 52px; }
   .quote--inline .quote__text { font-size: 26px; }
 
-  .cta { padding: 56px 24px 60px; }
-  .cta__title { font-size: 52px; }
+  .cta { grid-template-columns: minmax(0, 1fr); min-height: 0; }
+  .cta__rana { width: 64vw; }
+  .cta__content { grid-column: 1; padding: 40px 24px calc(62vw + 16px); }
+  .cta__text { font-size: 26px; }
+  .cta__small { font-size: 22px; }
 
   .footer__inner { padding: 40px 20px 32px; }
   .footer__name { font-size: 44px; }
