@@ -448,6 +448,27 @@ a { text-decoration: none; }
   text-wrap: pretty;
 }
 
+/* Small quote box between two modules (e.g. Dada quote between 02.1 and 02.2) */
+.mod--note { padding: calc(40 * var(--u)) calc(64 * var(--u)) calc(48 * var(--u)); }
+.note {
+  margin: 0;
+  max-width: calc(520 * var(--u));
+  display: flex;
+  flex-direction: column;
+  gap: calc(12 * var(--u));
+  padding: calc(22 * var(--u)) calc(26 * var(--u)) calc(20 * var(--u));
+  background: var(--yellow);
+  border: var(--line);
+  transform: rotate(-1deg);
+}
+.note__text {
+  margin: 0;
+  font-size: calc(24 * var(--u));
+  line-height: 1.2;
+  text-wrap: balance;
+}
+.note__cite { font-size: calc(14 * var(--u)); letter-spacing: .1em; color: var(--crimson); }
+
 /* ---------- Quote bands ---------- */
 .quote {
   background: var(--bg);
@@ -584,6 +605,10 @@ a { text-decoration: none; }
   .mod__sub { font-size: 34px; }
   .mod__pull { font-size: 30px; }
   .mod__body { font-size: 18px; }
+  .mod--note { padding: 28px 24px 32px; }
+  .note { padding: 18px 20px 16px; }
+  .note__text { font-size: 20px; }
+  .note__cite { font-size: 13px; }
 
   .quote { padding: 56px 24px; min-height: 0; }
   .quote__text { font-size: 30px; }
