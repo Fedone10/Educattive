@@ -448,63 +448,6 @@ a { text-decoration: none; }
   text-wrap: pretty;
 }
 
-/* Small quote box between two modules (e.g. Dada quote between 02.1 and 02.2) */
-.mod--note {
-  padding: calc(56 * var(--u)) calc(64 * var(--u)) calc(64 * var(--u));
-  background-color: var(--cream);
-  background-image: radial-gradient(rgba(17, 17, 17, .12) 1.2px, transparent 1.3px);
-  background-size: calc(18 * var(--u)) calc(18 * var(--u));
-}
-.note {
-  position: relative;
-  margin: 0;
-  max-width: calc(600 * var(--u));
-  display: flex;
-  flex-direction: column;
-  gap: calc(18 * var(--u));
-  padding: calc(44 * var(--u)) calc(36 * var(--u)) calc(28 * var(--u));
-  background: var(--yellow);
-  color: var(--ink);
-  border: var(--line);
-  box-shadow: calc(8 * var(--u)) calc(8 * var(--u)) 0 var(--ink);
-  transform: rotate(-1.5deg);
-}
-/* big crimson quotation mark tab */
-.note::before {
-  content: "“";
-  position: absolute;
-  top: calc(-30 * var(--u));
-  left: calc(28 * var(--u));
-  width: calc(60 * var(--u));
-  height: calc(60 * var(--u));
-  display: grid;
-  place-items: center;
-  padding-top: calc(22 * var(--u));
-  background: var(--crimson);
-  color: var(--cream);
-  border: var(--line);
-  border-radius: 999px;
-  font-family: Georgia, "Times New Roman", serif;
-  font-size: calc(64 * var(--u));
-  line-height: 1;
-}
-.note__text {
-  margin: 0;
-  padding: 0;
-  font-size: calc(30 * var(--u));
-  line-height: 1.15;
-  text-wrap: balance;
-}
-.note__cite {
-  align-self: flex-start;
-  margin: 0;
-  padding: calc(6 * var(--u)) calc(12 * var(--u)) calc(5 * var(--u));
-  background: var(--ink);
-  color: var(--yellow);
-  font-size: calc(14 * var(--u));
-  letter-spacing: .12em;
-}
-
 /* ---------- Quote bands ---------- */
 .quote {
   background: var(--bg);
@@ -524,6 +467,24 @@ a { text-decoration: none; }
   text-wrap: balance;
 }
 .quote__cite { font-size: calc(16 * var(--u)); letter-spacing: .1em; color: var(--cite); }
+/* word stressed by the author (e.g. "STESSA" in Lewis) */
+.quote__em {
+  font-style: normal;
+  background: var(--yellow);
+  color: var(--ink);
+  padding: 0 .12em;
+  -webkit-box-decoration-break: clone;
+  box-decoration-break: clone;
+}
+/* quote set inside a chapter column, between two modules */
+.quote--inline {
+  min-height: 0;
+  border-top: none;
+  border-bottom: var(--line);
+  padding: calc(64 * var(--u)) calc(64 * var(--u)) calc(72 * var(--u));
+  gap: calc(22 * var(--u));
+}
+.quote--inline .quote__text { max-width: calc(680 * var(--u)); font-size: calc(40 * var(--u)); }
 
 /* ---------- Reveal on scroll (only when JS is running) ---------- */
 .js .mod__inner,
@@ -641,14 +602,11 @@ a { text-decoration: none; }
   .mod__sub { font-size: 34px; }
   .mod__pull { font-size: 30px; }
   .mod__body { font-size: 18px; }
-  .mod--note { padding: 56px 24px 48px; }
-  .note { padding: 38px 22px 22px; box-shadow: 6px 6px 0 var(--ink); }
-  .note::before { left: 18px; top: -26px; width: 52px; height: 52px; font-size: 56px; padding-top: 20px; }
-  .note__text { font-size: 23px; }
-  .note__cite { font-size: 12px; }
 
   .quote { padding: 56px 24px; min-height: 0; }
   .quote__text { font-size: 30px; }
+  .quote--inline { padding: 48px 24px 52px; }
+  .quote--inline .quote__text { font-size: 26px; }
 
   .cta { padding: 56px 24px 60px; }
   .cta__title { font-size: 52px; }
