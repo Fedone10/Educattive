@@ -599,20 +599,6 @@ a { text-decoration: none; }
 .footer__top:hover, .footer__top:focus-visible { background: var(--cream); color: var(--ink); }
 .footer__top:focus-visible { outline-color: var(--yellow); }
 
-.footer__privacy {
-  margin: 0;
-  padding: 0 calc(28 * var(--u)) calc(40 * var(--u));
-  max-width: calc(900 * var(--u));
-  font-family: system-ui, -apple-system, "Segoe UI", sans-serif;
-  text-transform: none;
-  font-size: calc(13 * var(--u));
-  line-height: 1.55;
-  color: rgba(255, 246, 240, .62);
-}
-.footer__privacy strong { color: var(--cream); font-weight: 600; }
-.footer__privacy a { color: var(--yellow); text-decoration: underline; text-underline-offset: 2px; }
-.footer__privacy a:hover { color: var(--cream); }
-
 /* ---------- Tablet desktop (760–1099px) ---------- */
 @media (max-width: 1099.98px) {
   .chapter { grid-template-columns: minmax(0, 4fr) minmax(0, 6fr); }
@@ -657,7 +643,6 @@ a { text-decoration: none; }
 
   .footer__inner { padding: 40px 20px 32px; }
   .footer__name { font-size: 44px; }
-  .footer__privacy { padding: 0 20px 32px; font-size: 12px; }
 }
 
 /* ---------- Reduced motion ---------- */
