@@ -22,4 +22,4 @@ Poi apri http://localhost:8000. Per pubblicarla basta caricare la cartella così
 
 Il font della cliente non è incluso. Copialo in `fonts/lazy_dog.ttf` e verrà usato automaticamente;
 finché manca, la pagina usa Patrick Hand SC (Google Fonts). Una volta inserito il font vero,
-valuta se rimuovere l'ispessimento `-webkit-text-stroke` della classe `.st` in `styles.css`.
+rimuovi la regola `.st` in `styles.css` (applica un grassetto sintetico per ispessire il font di riserva).

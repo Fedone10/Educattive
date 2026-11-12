@@ -43,8 +43,11 @@ h1, h2, h3, p { margin: 0; font-weight: 400; }
 img { display: block; max-width: 100%; }
 a { text-decoration: none; }
 
-/* Thickens the fallback marker font. Re-test (probably remove) once Lazy Dog is in. */
-.st { -webkit-text-stroke: .04em currentColor; paint-order: stroke fill; }
+/* Thickens the fallback marker font with the browser's own synthetic bold.
+   (A -webkit-text-stroke looked smeared on some browsers, e.g. Safari/iOS, where the
+   stroke is painted over the fill and shows the font's overlapping contours.)
+   Remove this rule once Lazy Dog is in, so the real font is not faux-bolded. */
+.st { font-weight: 700; font-synthesis: weight; }
 
 .c-crimson { color: var(--crimson); }
 .c-yellow { color: var(--yellow); }
