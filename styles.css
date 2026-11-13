@@ -545,34 +545,6 @@ a { text-decoration: none; }
   width: min(38vw, calc(620 * var(--u)));
 }
 .cta__rana { display: block; width: 100%; height: auto; pointer-events: none; }
-/* speech bubble: the frog says the last line */
-.cta__bubble {
-  position: absolute;
-  left: 58%;
-  bottom: 80%;
-  width: max-content;
-  max-width: calc(270 * var(--u));
-  margin: 0;
-  padding: calc(20 * var(--u)) calc(28 * var(--u)) calc(18 * var(--u));
-  background: #FFFFFF;
-  color: var(--crimson);
-  border: var(--line);
-  border-radius: 46% 54% 50% 50% / 58% 52% 48% 42%;
-  font-size: calc(26 * var(--u));
-  line-height: 1.12;
-  text-align: center;
-  text-wrap: balance;
-  transform: rotate(-3deg);
-}
-.cta__tail {
-  position: absolute;
-  left: 16%;
-  top: calc(100% - 3px);
-  width: calc(34 * var(--u));
-  height: auto;
-  overflow: visible;
-}
-.cta__tail path { fill: #FFFFFF; stroke: var(--ink); stroke-width: 2.5; stroke-linejoin: round; }
 .cta__content {
   grid-column: 2;
   position: relative;
@@ -585,11 +557,30 @@ a { text-decoration: none; }
   padding: calc(64 * var(--u)) calc(56 * var(--u)) calc(64 * var(--u)) calc(24 * var(--u));
 }
 .cta__handle { font-size: calc(15 * var(--u)); letter-spacing: .22em; color: var(--crimson); }
+/* speech bubble: the frog says the whole text */
+.cta__bubble {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: calc(18 * var(--u));
+  padding: calc(36 * var(--u)) calc(44 * var(--u)) calc(34 * var(--u));
+  background: #FFFFFF;
+  border: var(--line);
+  /* hand-drawn, slightly irregular outline */
+  border-radius: calc(48 * var(--u)) calc(30 * var(--u)) calc(52 * var(--u)) calc(26 * var(--u)) / calc(30 * var(--u)) calc(50 * var(--u)) calc(28 * var(--u)) calc(46 * var(--u));
+  transform: rotate(-1deg);
+}
 .cta__text {
   font-size: min(3vw, calc(42 * var(--u)));
   line-height: 1.1;
   text-wrap: balance;
 }
+.cta__small { margin: 0; font-size: calc(30 * var(--u)); line-height: 1.2; color: var(--crimson); }
+.cta__tail { position: absolute; overflow: visible; height: auto; }
+.cta__tail path { fill: #FFFFFF; stroke: var(--ink); stroke-width: 2.5; stroke-linejoin: round; }
+/* desktop: tail on the left, pointing at the frog */
+.cta__tail--side { right: calc(100% - 3px); top: 26%; width: calc(84 * var(--u)); }
+.cta__tail--down { display: none; }
 .cta__btn {
   display: inline-flex;
   align-items: center;
@@ -684,9 +675,13 @@ a { text-decoration: none; }
 
   .cta { grid-template-columns: minmax(0, 1fr); min-height: 0; }
   .cta__frog { width: 64vw; }
-  .cta__bubble { left: 54%; max-width: 46vw; padding: 12px 16px 11px; font-size: 18px; }
-  .cta__tail { width: 26px; left: 14%; }
-  .cta__content { grid-column: 1; padding: 40px 24px calc(62vw + 96px); }
+  .cta__bubble { padding: 24px 22px 22px; gap: 12px; border-radius: 34px 22px 38px 18px / 22px 36px 20px 34px; }
+  .cta__tail--side { display: none; }
+  .cta__tail--down { display: block; left: 22%; top: calc(100% - 3px); width: 40px; }
+  .cta__content { grid-column: 1; padding: 40px 24px calc(62vw + 44px); }
+  /* bubble last, right above the frog, so its tail points at it */
+  .cta__btn { order: 1; }
+  .cta__bubble { order: 2; margin-top: 8px; }
   .cta__text { font-size: 26px; }
 
   .footer__inner { padding: 40px 20px 32px; }
