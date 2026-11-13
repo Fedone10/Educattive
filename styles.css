@@ -538,15 +538,41 @@ a { text-decoration: none; }
   display: grid;
   grid-template-columns: minmax(0, 5fr) minmax(0, 7fr);
 }
-.cta picture { display: contents; }
-.cta__rana {
+.cta__frog {
   position: absolute;
   left: 0;
   bottom: 0;
   width: min(38vw, calc(620 * var(--u)));
-  height: auto;
-  pointer-events: none;
 }
+.cta__rana { display: block; width: 100%; height: auto; pointer-events: none; }
+/* speech bubble: the frog says the last line */
+.cta__bubble {
+  position: absolute;
+  left: 58%;
+  bottom: 80%;
+  width: max-content;
+  max-width: calc(270 * var(--u));
+  margin: 0;
+  padding: calc(20 * var(--u)) calc(28 * var(--u)) calc(18 * var(--u));
+  background: #FFFFFF;
+  color: var(--crimson);
+  border: var(--line);
+  border-radius: 46% 54% 50% 50% / 58% 52% 48% 42%;
+  font-size: calc(26 * var(--u));
+  line-height: 1.12;
+  text-align: center;
+  text-wrap: balance;
+  transform: rotate(-3deg);
+}
+.cta__tail {
+  position: absolute;
+  left: 16%;
+  top: calc(100% - 3px);
+  width: calc(34 * var(--u));
+  height: auto;
+  overflow: visible;
+}
+.cta__tail path { fill: #FFFFFF; stroke: var(--ink); stroke-width: 2.5; stroke-linejoin: round; }
 .cta__content {
   grid-column: 2;
   position: relative;
@@ -564,7 +590,6 @@ a { text-decoration: none; }
   line-height: 1.1;
   text-wrap: balance;
 }
-.cta__small { font-size: calc(30 * var(--u)); line-height: 1.2; color: var(--crimson); }
 .cta__btn {
   display: inline-flex;
   align-items: center;
@@ -658,10 +683,11 @@ a { text-decoration: none; }
   .quote--inline .quote__text { font-size: 26px; }
 
   .cta { grid-template-columns: minmax(0, 1fr); min-height: 0; }
-  .cta__rana { width: 64vw; }
-  .cta__content { grid-column: 1; padding: 40px 24px calc(62vw + 16px); }
+  .cta__frog { width: 64vw; }
+  .cta__bubble { left: 54%; max-width: 46vw; padding: 12px 16px 11px; font-size: 18px; }
+  .cta__tail { width: 26px; left: 14%; }
+  .cta__content { grid-column: 1; padding: 40px 24px calc(62vw + 96px); }
   .cta__text { font-size: 26px; }
-  .cta__small { font-size: 22px; }
 
   .footer__inner { padding: 40px 20px 32px; }
   .footer__name { font-size: 44px; }
